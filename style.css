@@ -1,0 +1,717 @@
+@charset "UTF-8";
+/* --------------------------------------------------
+   Template by espace（https://espace.monbalcon.net/）
+   Copyright: 2020 espace.
+
+   利用規約を遵守の上、ご利用ください。
+   二次配布、販売は禁止しています。
+   --------------------------------------------------*/
+
+/* ----- ▼ リセット　ここから（基本的には触らない方が良い部分） ▼ ----- */
+html {
+  font-size: 62.5%;
+}
+
+:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a::after, a::before, button, button::after, button::before, input, textarea, select {
+  transition: all 0.7s;
+}
+
+a img, button img {
+  transition-duration: .35s;
+}
+
+button {
+  outline: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  cursor: hand;
+}
+
+input, textarea, select {
+  font-size: 1.6rem;
+}
+
+input, textarea {
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+select {
+  appearance: button;
+}
+
+p, dl, ul, form {
+  margin: 25px 0;
+  word-break: break-all;
+}
+
+p:last-child, dl:last-child, ul:last-child, form:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 900px) {
+  p, form {
+    margin: 0 0 1.7rem;
+  }
+  p:last-child, form:last-child {
+    margin-bottom: 0;
+  }
+}
+/* ----- ▲ リセット　ここまで（基本的には触らない方が良い部分） ▲ ----- */
+
+/* ----- ▼ レイアウト　ここから ▼ ----- */
+/* 基本 */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+body, button, input, textarea, select {
+  font: 400 1.4rem/calc(1.4rem + 1.05rem) "Sawarabi Gothic", "Yu Gothic", Meiryo, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  color: #666c76;
+}
+
+header, main {
+  width: 100%;
+  max-width: 600px;
+}
+
+header {
+  margin: 40px auto 100px;
+}
+
+header.size-lg {
+  min-height: 100vh;
+}
+
+main {
+  margin: auto;
+}
+
+main.no_header {
+  margin-top: 140px;
+}
+
+main > article:first-child {
+  margin-top: 40px;
+}
+
+main > article:last-child {
+  margin-bottom: 80px;
+}
+
+article {
+  margin: 300px 0;
+  padding: 30px;
+  border: 1px solid #e4d4dc;
+}
+
+article > h2:first-child {
+  margin-top: -90px;
+}
+
+footer {
+  margin: 0 0 30px;
+  text-align: right;
+}
+
+#INDEX header {
+  min-height: auto;
+  margin: 40px auto;
+}
+
+#INDEX main > *:last-child {
+  margin-bottom: 40px;
+}
+
+a {
+  color: #888c6c;
+  border-bottom: 1px solid #888c6c;
+}
+
+a:hover {
+  border-color: transparent;
+}
+
+a.image {
+  border: 0;
+}
+
+/* 見出し */
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 36px;
+  font-family: "Dancing Script", cursive;
+  display: table;
+  width: 350px;
+}
+
+h1 a {
+  display: block;
+  height: 200px;
+  line-height: 200px;
+  margin: auto;
+  border: 0;
+  color: #fff;
+  text-shadow: none;
+  background: url(../img/layout/bg_image.jpg) no-repeat center/cover;
+}
+
+h1 a:hover {
+  text-shadow: #fff 0 0 10px;
+  letter-spacing: 2px;
+}
+
+header {
+  margin: 40px auto 100px;
+}
+
+header.size-lg h1 a {
+  height: 350px !important;
+  line-height: 350px !important;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+h2 {
+  position: relative;
+  margin: 70px 0;
+  height: 120px;
+  font-family: "Dancing Script", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-size: 2rem;
+  color: #d5acb0;
+  line-height: 120px;
+  z-index: 1;
+}
+
+h2::before, h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+
+h2::before {
+  left: calc(50% - 70px);
+  width: 140px;
+  height: 140px;
+  top: -10px;
+  background: #fff;
+  border-radius: 140px;
+}
+
+h2::after {
+  left: calc(50% - 60px);
+  width: 120px;
+  height: 120px;
+  top: 0;
+  background: url(../img/layout/h2.svg) no-repeat center/auto 100%;
+}
+
+h2 span {
+  padding: 0 5px;
+  background: #fff;
+}
+
+h3 {
+  margin: 70px 0 30px;
+  padding: 10px 0;
+  border: 2px solid #e4d4dc;
+  border-left: 0;
+  border-right: 0;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #d5acb0;
+}
+
+h4, h5 {
+  margin: 30px 0;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+h4 {
+  padding: 5px 10px;
+  background: #ece4e4;
+}
+
+h5 span {
+  padding: 5px 10px;
+  background: #ecece4;
+}
+
+/* リスト */
+ul .description, ol .description {
+  margin-left: 10px;
+}
+
+ul .description::before, ol .description::before {
+  content: "…";
+  margin-right: 10px;
+}
+
+ul li.next {
+  list-style: none;
+}
+
+ul li.next::before {
+  content: "→";
+  margin-right: 5px;
+  font-size: 120%;
+}
+
+ul.small {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.small li {
+  display: inline;
+}
+
+ul.small li::before {
+  color: #d5acb0;
+}
+
+ul.small li:not(:first-child):not(.next)::before {
+  margin: 0 5px 0 2px;
+  content: ":";
+  font-weight: 900;
+}
+
+ul.small li.next::before {
+  margin: 0 7px 0 2px;
+}
+
+dl {
+  margin: 10px 0;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 0 15px 40px;
+  border-bottom: 1px dotted #e4d4dc;
+}
+
+dl dd:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+dl.inline {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+dl.inline dt, dl.inline dd {
+  vertical-align: top;
+  margin: 0 0 15px 0;
+  padding: 0 0 15px;
+}
+
+dl.inline dt:last-of-type, dl.inline dd:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+dl.inline dt {
+  width: 130px;
+  padding: 0 30px 10px 0;
+  padding-right: 30px;
+  border-bottom: 1px dotted #e4d4dc;
+}
+
+dl.inline dt:last-of-type {
+  border-bottom: 0;
+}
+
+dl.inline dd {
+  width: calc(100% - 130px - 30px);
+}
+
+dl.border {
+  padding: 15px 20px;
+  border: 1px solid #e4d4dc;
+  border-radius: 0.25rem;
+}
+
+/* フォーム */
+.form-inline > *, .form-block > * {
+  margin-bottom: 5px;
+}
+
+.form-block dl dt, .form-block dl dd {
+  border-bottom: 0;
+}
+
+.form-block dl.inline dt {
+  width: 130px;
+}
+
+.form-block dl.inline dd {
+  width: calc(100% - 130px - 30px);
+}
+
+.form-block > *, .form-block dl dd > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.required::after {
+  content: "*";
+  color: #e1c6b7;
+}
+
+input, textarea, select,
+button:not(.manu-toggler), input[type="submit"], input[type="button"] {
+  border-radius: 0.25rem;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder,
+button:not(.manu-toggler)::placeholder, input[type="submit"]::placeholder, input[type="button"]::placeholder {
+  color: #888c6c;
+}
+
+input, textarea, select {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #ecece4;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:focus {
+  background: #ecece4;
+}
+
+button:not(.manu-toggler), input[type="submit"], input[type="button"] {
+  background: #ecece4;
+  border: 1px solid #ecece4;
+  color: #888c6c;
+}
+
+button:not(.manu-toggler):hover, input[type="submit"]:hover, input[type="button"]:hover {
+  background: #fff;
+}
+
+/* メニュー */
+.menu {
+  position: relative;
+  margin: 50px 0;
+  font: 500 1.2rem/2rem "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  text-align: center;
+}
+
+.menu::before, .menu::after {
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  top: -30px;
+  left: calc(50% - 35px);
+  width: 70px;
+}
+
+.menu::before {
+  content: "";
+  height: 0;
+  border: 10px solid #f4eae4;
+  border-color: #f4eae4 transparent #f4eae4 transparent;
+}
+
+.menu::after {
+  content: "menu";
+  text-align: center;
+  color: #e1c6b7;
+}
+
+.menu ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.menu a {
+  display: block;
+  padding: 5px 0;
+  border-bottom: 3px solid transparent;
+  color: #d5acb0;
+}
+
+.menu a:hover {
+  border-color: #f4eae4;
+}
+
+.menu.scroll {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 7px 0 3px;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0 0 10px #f4eae4;
+  text-align: left;
+}
+
+.menu.scroll + h1 {
+  margin-bottom: 125px;
+}
+
+.menu.scroll::before, .menu.scroll::after {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 70px;
+}
+
+.menu.scroll::before {
+  border-color: #f4eae4 transparent #f4eae4 #f4eae4;
+}
+
+.menu.scroll ul {
+  margin: 0 0 0 80px;
+}
+
+.menu.scroll ul li {
+  display: inline-block !important;
+}
+
+.menu.scroll a {
+  border-bottom: 3px solid transparent;
+}
+
+.menu.scroll a:hover {
+  border-color: #f4eae4 !important;
+  letter-spacing: 0 !important;
+}
+
+header.size-lg .menu ul li {
+  display: block;
+}
+
+header.size-lg .menu a {
+  border-color: transparent;
+}
+
+header.size-lg .menu a:hover {
+  letter-spacing: 3px;
+}
+
+.fixed-menu {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.fixed-menu ul {
+  padding: 0;
+  list-style: none;
+}
+
+.fixed-menu ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fixed-menu a, .fixed-menu button {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #fff;
+  border-bottom: 0;
+  border-radius: 20px 20px 0 0;
+  background: #e1c6b7;
+  box-shadow: 0 0 10px #fff;
+  color: #fff;
+}
+
+.fixed-menu a::before, .fixed-menu button::before {
+  position: absolute;
+  width: 26px;
+  top: 17%;
+  left: calc(50% - 13px);
+  text-align: center;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.fixed-menu a:hover, .fixed-menu button:hover {
+  background: #e1c6b7;
+}
+
+.fixed-menu a:hover::before, .fixed-menu button:hover::before {
+  transform: translateY(-3px);
+}
+
+.fixed-menu .pagetop a::before, .fixed-menu .pagetop button::before {
+  content: "\f106";
+}
+
+.fixed-menu .prev a::before, .fixed-menu .prev button::before {
+  content: "\f104";
+}
+
+.fixed-menu .next::before {
+  content: none;
+}
+
+.fixed-menu .next a::before, .fixed-menu .next button::before {
+  content: "\f105";
+}
+
+.fixed-menu .toc a::before, .fixed-menu .toc button::before {
+  content: "\f0ca";
+}
+
+.fixed-menu .home a::before, .fixed-menu .home button::before {
+  content: "\f015";
+}
+
+/* 装飾 */
+b, em, strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: normal;
+  background: linear-gradient(transparent 50%, #f4eae4 50%);
+}
+
+strong {
+  background: #f4eae4;
+}
+
+hr {
+  margin: 50px;
+  border: 0;
+  border-bottom: 2px dotted #ece4e4;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-small {
+  font-size: smaller;
+}
+
+/* 表示・非表示 */
+.collapse .toggler {
+  margin-bottom: 5px;
+}
+
+.collapse .toggler::before {
+  content: "▼";
+  margin-right: 2px;
+}
+
+.collapse .toggler-block {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.collapse .collapse-body {
+  display: none;
+  padding-bottom: 15px;
+}
+
+/* スマホ設定 */
+@media only screen and (max-width: 900px) {
+  body, button, input, textarea {
+    font-size: 1.4rem;
+    line-height: calc(1.4rem + 1.05rem);
+  }
+  header {
+    margin: 15px auto 100px;
+  }
+  article {
+    margin: 200px 15px;
+  }
+  #INDEX header {
+    margin: 15px auto;
+  }
+  /* リスト */
+  ul .description, ol .description {
+    display: block;
+    margin-left: 10px;
+  }
+  ul .description::before, ol .description::before {
+    content: "└";
+    margin-right: 10px;
+  }
+  dl.border dt, dl.border dd, dl.inline dt, dl.inline dd {
+    display: block;
+  }
+  dl.border dt, dl.inline dt {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  dl.border dd, dl.inline dd {
+    width: calc(100% - 40px);
+    padding-left: 40px;
+  }
+  /* フォーム */
+  .form-inline input {
+    width: 45%;
+  }
+  .form-block dl.inline dt {
+    width: 100%;
+  }
+  .form-block dl.inline dd {
+    width: calc(100% - 40px);
+    padding-left: 40px;
+  }
+  .form-block > *, .form-block dl dd > * {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+}
+/* ----- ▲ レイアウト　ここまで ▲ ----- */
