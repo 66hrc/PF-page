@@ -10,32 +10,143 @@
     <link href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
 </head>
-<body id="INDEX">
-<!-- メイン -->
+<body>
+<!-- ヘッダー -->
 <header class="size-lg">
     <h1><a href="top.html">site name</a></h1>
+    <nav id="mainMenu" class="menu">
+        <ul>
+            <li><a href="#MENU_1">information</a></li>
+            <li><a href="#MENU_2">template</a></li>
+            <li><a href="#MENU_3">about</a></li>
+            <li><a href="#MENU_4">main</a></li>
+            <li><a href="#MENU_5">contact</a></li>
+        </ul>
+    </nav>
 </header>
+
+<!-- メイン -->
 <main>
-    <article>
+    <article id="MENU_1">
+        <h2><span>information</span></h2>
         <div>
-            <p>
-                ここにサイトの説明やご挨拶など書けます。
-            </p>
-            <p>
-                バナーなどを設置してもOK。
-            </p>
-            <p class="text-center">
-                <a href="top.html" class="image"><img src="banner.jpg"></a>
+            <dl class="inline">
+                <dt>2020/11/05</dt>
+                    <dd>更新内容など</dd>
+                <dt>2020/11/01</dt>
+                    <dd>更新内容など</dd>
+                <dt>2020/11/01</dt>
+                    <dd>更新内容など</dd>
+            </dl>
+            <p class="text-right">
+                <a href=""><i class="fas fa-history"></i> 更新履歴</a>
             </p>
         </div>
-        <h4><span>注意</span></h4>
+        <div></div>
+    </article>
+
+    
+    <article id="MENU_2">
+        <h2><span>template</span></h2>
+        
+        <h3>ドキュメント</h3>
         <div>
             <p>
-                各種見出しや装飾も勿論使えます。<br>
-                注意書きなど<em>目立たせたい</em>部分に。
+                このテンプレートの詳細については、<a href="https://espace.monbalcon.net/" target="_bleak">eapace</a>のテンプレートサンプル内に「ドキュメント」を設置しております。<br>
+                各装飾、要素の使い方について詳細を記載しておりますので、サイト作成の参考にご覧ください。
             </p>
+        </div>
+
+        <h3>その他サンプルページ</h3>
+        <div>
+            <ul>
+                <li><a href="index.html">indexページ</a></li>
+                <li><a href="novel.html">小説ページ</a></li>
+                <li><a href="novel_no_header_1.html">小説ページ（ヘッダー無し）</a></li>
+                <li><a href="toc.html">目次ページ</a></li>
+            </ul>
+        </div>
+
+        <h3>使用素材</h3>
+        <div>
+            <ul>
+                <li><a href="https://unsplash.com/photos/anxRjLPEeyE" target="_bleak">Unsplash</a></li>
+            </ul>
+        </div>
+
+        <h3>使用アイコン</h3>
+        <div>
+            <ul>
+                <li><a href="https://fontawesome.com/" target="_bleak">Font Awesome 5</a></li>
+            </ul>
+        </div>
+    </article>
+
+    <article id="MENU_3">
+        <h2><span>about</span></h2>
+        <div>
+            <p>
+                サイトについてや自己紹介など。
+            </p>
+        </div>
+
+        <h5><span>リンクについて</span></h5>
+        <div>
+            <dl class="inline">
+                <dt>site name</dt>
+                    <dd>サイト名</dd>
+                <dt>url</dt>
+                    <dd>http://~</dd>
+                <dt>banner</dt>
+                    <dd>
+                        <img src="banner.jpg"><br>
+                        <small>※直リンクはご遠慮ください。</small>
+                    </dd>
+            </dl>
+        </div>
+    </article>
+    
+    <article id="MENU_4">
+        <h2><span>main</span></h2>
+        <h3>短編小説</h3>
+        <div>
+            <ul>
+                <li><a href="novel.html">注文の多い料理店</a><span class="description">宮沢賢治</span></li>
+                <li><a href="novel.html">作品名</a></li>
+            </ul>
+        </div>
+
+        <h3>長編小説</h3>
+        <div>
+            <dl>
+                <dt class="text-bold">吾輩は猫である（<a href="toc.html">目次</a>）</dt>
+                    <dd>
+                        <a href="novel_no_header_1.html">一</a> /
+                        <a href="novel_no_header_2.html">二</a>
+                    </dd>
+            </dl>
+        </div>
+
+    </article>
+    
+    <article id="MENU_5">
+        <h2><span>contact</span></h2>
+        <div>
+            <p>
+                お気軽に感想、お問い合わせください。<br>
+                <small>※サンプルは送信できません。</small>
+            </p>
+            <form class="form-block">
+                <dl class="inline">
+                    <dt>name</dt>
+                        <dd><input type="text" placeholder="お名前"></dd>
+                    <dt class="required">message</dt>
+                        <dd><textarea  placeholder="本文" rows="5"></textarea></dd>
+                </dl>
+                <button type="submit">送信</button>
+            </form>
         </div>
     </article>
 </main>
@@ -45,6 +156,11 @@
     <div class="text-small">
         <a href="https://espace.monbalcon.net/" target="_bleak">Template by espace.</a>
     </div>
+    <nav id="pageBottomNav" class="fixed-menu">
+        <ul>
+            <li id="pageTop" class="pagetop"><button></button></li>
+        </ul>
+    </nav>
 </footer>
 
 <!-- jQuery -->
